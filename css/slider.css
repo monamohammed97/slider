@@ -1,0 +1,325 @@
+/* slider 2  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.slider {
+  width: 100%;
+  /* max-width: 1440px; */
+  /* padding: 16px; */
+  position: relative;
+  margin: 2rem auto;
+  direction: ltr;
+}
+
+.slider .buttons {
+  z-index: 1;
+  right: 50%;
+  top: 261px;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50px;
+  transform: translateX(50%);
+  background-color: #FFFFFF;
+}
+
+.slider .buttons .previous,
+.slider .buttons .next {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.slider .buttons .previous {
+  left: 0;
+  background-image: url("https://alcs-slider.netlify.app/images/icon-prev.svg");
+}
+
+.slider .buttons .previous:hover {
+  transform: scale(1.25);
+}
+
+.slider .buttons .next {
+  right: 0;
+  background-image: url("https://alcs-slider.netlify.app/images/icon-next.svg");
+}
+
+.slider .buttons .next:hover {
+  transform: scale(1.25);
+}
+
+.slider .slide {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.slider .slide .testimonial {
+  padding: 16px 50px;
+  background-size: 30px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url(https://alcs-slider.netlify.app/images/pattern-quotes.svg);
+}
+
+.slider .slide .testimonial blockquote {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.slider .slide .testimonial .author {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.slider .slide .testimonial .author span {
+  display: block;
+  color: #babacf;
+  font-weight: 500;
+}
+
+.slider .container-box {
+  position: relative;
+}
+
+.slider .container-box .bg-img {
+  height: 300px;
+}
+
+.container-box .bg-img img {
+  height: 100%;
+}
+
+.slider .slide .slider-img {
+  width: auto;
+  padding: 30px;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  /* background-size: contain;
+  background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-image: url(https://alcs-slider.netlify.app/images/pattern-bg.svg); */
+}
+
+.slider .slide .slider-img img {
+  width: 240px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0px 16px 40px 0px rgba(135, 105, 210, 0.4);
+}
+
+.slider .slide .active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition-delay: 0.4s;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer a {
+  color: #3e52a3;
+}
+
+.hide {
+  display: none;
+}
+
+/* slick slider */
+.slick-slider {
+  width: 90%;
+  direction: ltr;
+  margin: auto;
+}
+
+
+/* storys_head */
+.storys {
+  height: 450px;
+  position: relative;
+}
+
+.storys_text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.storys_text h3 {
+  color: #fff;
+  font-size: 68px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.storys_text h3:before {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(-45deg, #6f9376, #62bb46 65%, #62bb46);
+  content: "";
+  bottom: 0;
+}
+
+.storys_text p {
+  color: #fff;
+  font-size: 25px;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+.storys_images {
+  display: flex;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.storys_images .container-image {
+  width: calc(100% / 6);
+  transition: all .3s ease;
+  background-color: #000;
+}
+
+.storys_images .container-image:hover {
+  width: calc(100% / 4);
+  transition: all .3s ease;
+}
+
+.storys_images .container-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+
+.storys_images .container-image img:hover {
+  opacity: 1;
+}
+
+
+@media screen and (min-width: 600px) {
+  .slider {
+    max-width: 800px;
+  }
+
+  .slider .buttons {
+    top: 250px;
+  }
+}
+
+@media screen and (min-width: 991.98px) {
+  .slider .container-box .bg-img {
+    height: 500px;
+  }
+
+  .slider {
+    width: 100%;
+    max-width: 80%;
+    /* padding: 64px 64px 64px 0; */
+  }
+
+  .slider .buttons {
+    right: 30%;
+    top: 435px;
+  }
+
+  .slider .slide {
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .slider .slide .testimonial {
+    padding: 32px 0 0 0;
+    background-size: 80px;
+    background-position: 19% -7%;
+    /* transform: translateX(100px); */
+  }
+
+  .slider .slide .testimonial blockquote {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 36px;
+  }
+
+  .slider .slide .testimonial .author span {
+    display: contents;
+  }
+
+  .slider .slide .slider-img {
+    padding: 55px;
+  }
+
+  .slider .slide .slider-img img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+
+  .storys_images {
+    flex-wrap: wrap;
+  }
+
+  .storys_images .container-image {
+    width: calc(100%/3);
+    height: 50%;
+  }
+
+  .storys_images .container-image:hover {
+    width: calc(100%/3);
+    transform: scaleX(1.1);
+    z-index: 1;
+  }
+
+  .storys_text h3 {
+    font-size: 48px;
+  }
+
+  .storys_text p {
+    font-size: 20px;
+  }
+
+}
+@media screen and (max-width: 575.98px) {
+  .storys {
+    height: 400px;
+  }
+  .storys_text h3 {
+    font-size: 38px;
+  }
+
+  .storys_text p {
+    font-size: 18px;
+  }
+}
